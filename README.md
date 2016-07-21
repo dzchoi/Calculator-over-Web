@@ -62,33 +62,35 @@ This application consists of the following three AWS services.
 2. create the execution role 'lambda-gateway-execution-role' with the inline policy:  
 
     ```
-    "Version": "2012-10-17",
-    "Statement": [
-      {
-        "Sid": "Stmt1428341300017",
-        "Action": [
-          "dynamodb:DescribeTable",
-          "dynamodb:DeleteItem",
-          "dynamodb:GetItem",
-          "dynamodb:PutItem",
-          "dynamodb:Query",
-          "dynamodb:Scan",
-          "dynamodb:UpdateItem"
-        ],
-        "Effect": "Allow",
-        "Resource": "*"
-      },
-      {
-        "Sid": "",
-        "Resource": "*",
-        "Action": [
-          "logs:CreateLogGroup",
-          "logs:CreateLogStream",
-          "logs:PutLogEvents"
-        ],
-        "Effect": "Allow"
-      }
-    ]
+    {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "Stmt1428341300017",
+          "Action": [
+            "dynamodb:DescribeTable",
+            "dynamodb:DeleteItem",
+            "dynamodb:GetItem",
+            "dynamodb:PutItem",
+            "dynamodb:Query",
+            "dynamodb:Scan",
+            "dynamodb:UpdateItem"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Sid": "",
+          "Resource": "*",
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow"
+        }
+      ]
+    }
     ```
 3. run `./dynamo.sh` to create the table 'tableCalc' in dynamoDB
 4. run `./lambda.sh` to create the Lambda function 'LambdaFunctionForCalc'
