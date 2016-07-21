@@ -52,14 +52,14 @@ This application consists of the following three AWS services.
   - converts the query string parameters into a json data, and
   - invokes the AWS lambda function to compute expressions.
 - AWS lambda:
-  - the Python function that computes the expressions and
-  - uses boto3 SDK for using the AWS DynamoDB service
+  - the Python function 'LambdaFunctionForCalc' that computes the expressions and
+  - uses boto3 SDK for invoking the AWS DynamoDB service.
 - AWS DynamoDB:
   - the NoSQL database that holds the variables and that is searched for the variables.
 
 ##How to install the application into AWS
 1. (optional) install AWS CLI
-2. create the execution role 'lambda-gateway-execution-role' with the inline policy:  
+2. create the execution role 'lambda-gateway-execution-role' with the inline policy:
 
     ```
     {
