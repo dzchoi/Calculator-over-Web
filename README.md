@@ -95,16 +95,15 @@ This application consists of the following three AWS services.
 3. run `./dynamo.sh` to create the table 'tableCalc' in dynamoDB
 4. run `./lambda.sh` from the same directory of `LambdaFunctionForCalc.py` to create the Lambda function 'LambdaFunctionForCalc'
 5. run `./restapi.sh` from the same directory of `LambdaFunctionForCalc.py` to create the RESTful API
-  - or create a REST API in AWS console referencing the following structure
+  - or create a REST API in AWS console referencing the following structure and use this as a custom template for the content-type of `application/json` in the Integration Request for the GET method:
+
+    ```
+    {
+      "op": "$input.params('op')",
+      "var": "$input.params('var')",
+      "table": "$input.params('table')"
+    }
+    ```
 
 ##Structure of the REST API
 ![alt tag](https://raw.githubusercontent.com/dzchoi/Calculator-over-Web/master/REST-API.png)
-- use the following as a custom template for the content-type of `application/json`:
-
-  ```
-  {
-    "op": "$input.params('op')",
-    "var": "$input.params('var')",
-    "table": "$input.params('table')"
-  }
-  ```
