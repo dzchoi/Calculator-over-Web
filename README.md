@@ -94,4 +94,4 @@ This application consists of the following three AWS services.
     ```
 3. run `./dynamo.sh` to create the table 'tableCalc' in dynamoDB
 4. run `./lambda.sh` from the same directory of `LambdaFunctionForCalc.py` to create the Lambda function 'LambdaFunctionForCalc'
-5. run `./restapi.sh` to create the RESTful API
+5. run `./restapi.sh` from the same directory of `LambdaFunctionForCalc.py` to create the RESTful API
