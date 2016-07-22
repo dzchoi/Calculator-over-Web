@@ -48,12 +48,12 @@ Calculations are performed in the number system of Python and the following oper
 ##About the internals of the application.
 This application consists of the following three AWS services.
 - AWS gateway API:
-  - accepts the arithmetic expressions in the form of RESTful API,
+  - accepts the arithmetic expressions in the form of query string parameters through RESTful API,
   - converts the query string parameters into a json data, and
-  - invokes the AWS lambda function to compute expressions.
+  - invokes the AWS lambda function with the json data to compute expressions.
 - AWS lambda:
-  - the Python function 'LambdaFunctionForCalc' that computes the expressions and
-  - uses boto3 SDK for invoking the AWS DynamoDB service.
+  - runs the Python function 'LambdaFunctionForCalc' that actually computes the expressions and
+  - makes use of the AWS DynamoDB using the AWS SDK for Python, Boto3.
 - AWS DynamoDB:
   - the NoSQL database that holds the variables and that is searched for the variables.
 
