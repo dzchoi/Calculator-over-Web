@@ -53,7 +53,7 @@ This application consists of the following three AWS services.
   - invokes the AWS lambda function with the json data to compute expressions.
 - AWS lambda:
   - runs the Python function 'LambdaFunctionForCalc' that actually computes the expressions and
-  - makes use of the AWS DynamoDB using the AWS SDK for Python, Boto3.
+  - makes use of the AWS DynamoDB service using the AWS SDK for Python, Boto3.
 - AWS DynamoDB:
   - the NoSQL database that holds the variables and that is searched for the variables.
 
