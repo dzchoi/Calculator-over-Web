@@ -1,7 +1,7 @@
 # Calculator over Web
 A web application for calculating arithmetic expressions using AWS
 
-The hyperlinks below can be clicked on directly from this email or the text on the hyperlink can be just copied (including space characters) and pasted into any web browsers.
+The hyperlinks below can be clicked on directly from this document or the text on the hyperlink can be just copied (including space characters) and pasted into any web browsers.
 
 ##Usage examples:
 
