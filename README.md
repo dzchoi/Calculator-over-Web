@@ -3,7 +3,7 @@ A web application for calculating arithmetic expressions using AWS
 
 The hyperlinks below can be clicked on directly from this document or the text on the hyperlink can be just copied (including space characters) and pasted into any web browsers.
 
-##Usage examples:
+### Usage examples:
 
 1. compute `(3 - 1) * 2`  
 [https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=(3 - 1) * 2](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=(3 - 1) * 2)  
@@ -37,7 +37,7 @@ The hyperlinks below can be clicked on directly from this document or the text o
 [https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=1 %2b 2](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=1 %2b 2)  
 --> will say `"3"`
 
-##Details of the query string parameters:
+### Details of the query string parameters:
 - `op` : (optional) the arithmetic expression to compute
 - `var` : (optional) name of the variable that will store the computed result (with 'op' parameter) or will show its content (without 'op' parameter)
 - `table` : (optional) name of the table (`tableCalc` by default) in AWS DynamoDB that contains all the variables mentioned in the expressions
@@ -45,7 +45,7 @@ The hyperlinks below can be clicked on directly from this document or the text o
 Calculations are performed in the number system of Python and the following operators can be used now in the expressions:
   `+`(addition), `-`(subtraction or unary minus), `*`(multiplication), `/`(division), `**`(power).
 
-##About the internals of the application.
+### About the internals of the application.
 This application consists of the following three AWS services.
 - AWS gateway API:
   - accepts the arithmetic expressions in the form of query string parameters through RESTful API,
@@ -57,7 +57,7 @@ This application consists of the following three AWS services.
 - AWS DynamoDB:
   - the NoSQL database that holds the variables and that is searched for the variables.
 
-##How to install the application into AWS
+### How to install the application into AWS
 1. (optional) install AWS CLI
 2. create the execution role 'lambda-gateway-execution-role' with the inline policy:
 
@@ -105,5 +105,5 @@ This application consists of the following three AWS services.
     }
     ```
 
-##Structure of the REST API
+### Structure of the REST API
 ![alt tag](https://raw.githubusercontent.com/dzchoi/Calculator-over-Web/master/REST-API.png)
