@@ -10,7 +10,7 @@ The hyperlinks below can be clicked on directly from this document or the text o
 --> will say `"4"`
 
 2. compute `6**100` (6 to the power of 100)  
-[https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=6**100](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=6**100)  
+[https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=6\*\*100](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=6**100)  
 --> will say `"653318623500070906096690267158057820537143710472954871543071966369497141477376"`
 
 3. compute `(3 - 1) * 2` and store it into the variable A  
