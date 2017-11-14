@@ -1,7 +1,7 @@
 # Calculator over Web
 A web application for calculating arithmetic expressions using AWS
 
-The hyperlinks below can be clicked on directly from this document, or the text behind the hyperlink can be copied and pasted into any web browsers. Space characters are allowed inside mathematical expressions, but in the URL, most web browsers will require them to be converted to '`%20`'.
+The hyperlinks below can be clicked on directly from this document, or the text behind the hyperlink can be copied and pasted into any web browsers. Space characters are allowed inside arithmetic expressions, but in the URL, most web browsers will require them to be converted to '`%20`'.
 
 ### Usage examples:
 
