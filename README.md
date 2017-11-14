@@ -33,7 +33,7 @@ The hyperlinks below can be clicked on directly from this document, or the text 
 [https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc)  
 --> will say `"A : 4\nB : 2\n"`
 
-8. compute `1 + 2` (note '+' was decoded as '%2b' to conform to the URL encoding rule)  
+8. compute `1 + 2` (note '+' was decoded as '`%2b`' to conform to the URL encoding rule)  
 [https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=1%2b2](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=1%20%2b%202)  
 --> will say `"3"`
 
