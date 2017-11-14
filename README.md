@@ -6,7 +6,7 @@ The hyperlinks below can be clicked on directly from this document or the text o
 ### Usage examples:
 
 1. compute `(3 - 1) * 2`  
-[https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=(3 - 1) * 2](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=(3 - 1) * 2)  
+[https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=(3-1)*2](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=(3%20-%201)%20*%202)  
 --> will say `"4"`
 
 2. compute `6**100` (6 to the power of 100)  
