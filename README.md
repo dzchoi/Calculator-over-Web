@@ -42,7 +42,7 @@ The hyperlinks below can be clicked on directly from this document, or the text 
 - `var` : (optional) name of the variable that will store the computed result (with 'op' parameter) or will show its content (without 'op' parameter)
 - `table` : (optional) name of the table (`tableCalc` by default) in AWS DynamoDB that contains all the variables mentioned in the expressions
 
-Calculations are performed in the Python number system, so integers with any number of digits and floating-point numbers with any precision can be used. The following operators can be used in the expressions for this simple calculator (although support of built-in functions such as trigonometric ones could be done by extending the parser in `LambdaFunctionForCalc` in :
+Calculations are performed in the Python number system, so integers with any number of digits and floating-point numbers with any precision can be used. The following operators can be used in the expressions for this simple calculator (although support of built-in functions such as trigonometric ones could be done by extending the parser in `LambdaFunctionForCalc`):
   `+`(addition), `-`(subtraction or unary minus), `*`(multiplication), `/`(division), `**`(power).
 
 ### About the internals of the application.
