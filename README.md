@@ -1,7 +1,7 @@
 # Calculator over Web
 A web application for calculating arithmetic expressions using AWS
 
-The hyperlinks below can be clicked on directly from this document or the text on the hyperlink can be just copied (including space characters) and pasted into any web browsers.
+The hyperlinks below can be clicked on directly from this document, or the text behind the hyperlink can be copied and pasted into any web browsers. Space characters are allowed inside mathematical expressions, but in the URL, most web browsers will require them to be converted to '`%20`'.
 
 ### Usage examples:
 
@@ -14,15 +14,15 @@ The hyperlinks below can be clicked on directly from this document or the text o
 --> will say `"653318623500070906096690267158057820537143710472954871543071966369497141477376"`
 
 3. compute `(3 - 1) * 2` and store it into the variable A  
-[https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?var=A&op=(3 - 1) * 2](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?var=A&op=(3 - 1) * 2)  
+[https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?var=A&op=(3-1)*2](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?var=A&op=(3%20-%201)%20*%202)  
 --> will say `"A = 4"`
 
 4. compute `A / 2` and store it into the variable B  
-[https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?var=B&op=A / 2](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?var=B&op=A / 2)  
+[https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?var=B&op=A/2](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?var=B&op=A%20/%202)  
 --> will say `"B = 2"`
 
 5. compute `A * B`  
-[https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=A * B](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=A * B)  
+[https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=A*B](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=A%20*%20B)  
 --> will say `"8"`
 
 6. look up variable `A`  
@@ -34,7 +34,7 @@ The hyperlinks below can be clicked on directly from this document or the text o
 --> will say `"A : 4\nB : 2\n"`
 
 8. compute `1 + 2` (note '+' was decoded as '%2b' to conform to the URL encoding rule)  
-[https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=1 %2b 2](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=1 %2b 2)  
+[https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=1%2b2](https://h7f1a8znc2.execute-api.us-east-1.amazonaws.com/calc?op=1%20%2b%202)  
 --> will say `"3"`
 
 ### Details of the query string parameters:
