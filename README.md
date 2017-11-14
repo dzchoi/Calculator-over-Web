@@ -42,7 +42,7 @@ The hyperlinks below can be clicked on directly from this document, or the text 
 - `var` : (optional) name of the variable that will store the computed result (with 'op' parameter) or will show its content (without 'op' parameter)
 - `table` : (optional) name of the table (`tableCalc` by default) in AWS DynamoDB that contains all the variables mentioned in the expressions
 
-Calculations are performed in the number system of Python and the following operators can be used now in the expressions:
+Calculations are performed in the Python number system, so integers with any number of digits and floating-point numbers with any precision can be used. The following operators can be used in the expressions for this simple calculator (although support of built-in functions such as trigonometric ones could be done by extending the parser in `LambdaFunctionForCalc` in :
   `+`(addition), `-`(subtraction or unary minus), `*`(multiplication), `/`(division), `**`(power).
 
 ### About the internals of the application.
@@ -52,14 +52,14 @@ This application consists of the following three AWS services.
   - converts the query string parameters into a json data, and
   - invokes the AWS lambda function with the json data to compute expressions.
 - AWS lambda:
-  - runs the Python function 'LambdaFunctionForCalc' that actually computes the expressions and
+  - runs the Python function `LambdaFunctionForCalc` that actually computes the expressions and
   - makes use of the AWS DynamoDB service using the AWS SDK for Python, Boto3.
 - AWS DynamoDB:
   - the NoSQL database that holds the variables and that is searched for the variables.
 
 ### How to install the application into AWS
-1. (optional) install AWS CLI
-2. create the execution role 'lambda-gateway-execution-role' with the inline policy:
+1. (optional) Install AWS CLI
+2. Create the execution role 'lambda-gateway-execution-role' with the inline policy:
 
     ```
     {
@@ -92,9 +92,9 @@ This application consists of the following three AWS services.
       ]
     }
     ```
-3. run `./dynamo.sh` to create the table 'tableCalc' in dynamoDB
-4. run `./lambda.sh` from the same directory of `LambdaFunctionForCalc.py` to create the Lambda function 'LambdaFunctionForCalc'
-5. run `./restapi.sh` from the same directory of `LambdaFunctionForCalc.py` to create the RESTful API
+3. Run `./dynamo.sh` to create the table 'tableCalc' in dynamoDB
+4. Run `./lambda.sh` from the same directory of `LambdaFunctionForCalc.py` to create the Lambda function 'LambdaFunctionForCalc'
+5. Run `./restapi.sh` from the same directory of `LambdaFunctionForCalc.py` to create the RESTful API
   - or create a REST API in AWS console referencing the following structure and use this as a custom template for the content-type of `application/json` in the Integration Request for the GET method:
 
     ```
